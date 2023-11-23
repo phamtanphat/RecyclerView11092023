@@ -23,7 +23,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_book_title"
+            android:id="@+id/text_view_book_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -38,7 +38,7 @@
             tools:text="Vượt lười - Liệu trình cho người thiếu động lực" />
 
         <TextView
-            android:id="@+id/text_view_book_date_update_and_view_count"
+            android:id="@+id/text_view_book_post_date_and_view_count"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
@@ -49,7 +49,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toEndOf="@id/image_view_book"
-            app:layout_constraintTop_toBottomOf="@id/tv_book_title"
+            app:layout_constraintTop_toBottomOf="@id/text_view_book_name"
             tools:text="Ngày đăng: 20/11/2023 - Lượt xem: 211" />
 
         <TextView
@@ -64,7 +64,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toEndOf="@id/image_view_book"
-            app:layout_constraintTop_toBottomOf="@id/text_view_book_date_update_and_view_count"
+            app:layout_constraintTop_toBottomOf="@id/text_view_book_post_date_and_view_count"
             tools:text="Làm thế nào để vượt qua sự lười biếng? Có cách nào trị triệt để căn bệnh này không? Chắc hẳn những bạn trẻ thường xuyên gặp phải tình trạng trì trệ..." />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
