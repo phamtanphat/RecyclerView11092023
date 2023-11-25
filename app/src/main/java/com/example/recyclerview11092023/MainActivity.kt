@@ -19,16 +19,20 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var bookAdapter: BookAdapter
-    private val listBook: List<Book> by lazy {
-        Book.getListBooks()
-    }
+    private var listBook: MutableList<Book> = mutableListOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         recyclerView = findViewById(R.id.recyclerview_book)
         bookAdapter = BookAdapter()
+        listBook = Book.getListBooks().toMutableList()
         bookAdapter.setListBook(listBook)
         recyclerView.adapter = bookAdapter
+
+        bookAdapter.setOnLongClickListener { position ->
+            listBook.removeAt(position)
+            bookAdapter.notifyItemRemoved(position)
+        }
     }
 }
