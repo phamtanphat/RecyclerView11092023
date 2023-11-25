@@ -1,6 +1,9 @@
 package com.example.recyclerview11092023
 
 import android.content.Context
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.style.ClickableSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -20,6 +23,23 @@ class BookAdapter : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
         private var tvName: TextView = view.findViewById(R.id.text_view_book_name)
         private var tvPostDateAndViewCount: TextView = view.findViewById(R.id.text_view_book_post_date_and_view_count)
         private var tvDescription: TextView = view.findViewById(R.id.text_view_book_description)
+
+        fun bind(book: Book?) {
+            book?.let {
+                image.setImageResource(it.image)
+                tvName.text = it.name
+                var spannableStringBuilder = SpannableStringBuilder().apply {
+//                    append("Ngày đăng ${it.postDate}")
+//                    append(" - ")
+                    append("Lượt xem: ${it.viewCount}", )
+                }
+
+                spannableStringBuilder.setSpan({
+
+                }, 0, spannableStringBuilder.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BookViewHolder {
@@ -33,6 +53,6 @@ class BookAdapter : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.bind(listBook.getOrNull(position))
     }
 }
