@@ -28,16 +28,12 @@ class BookAdapter : RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
             book?.let {
                 image.setImageResource(it.image)
                 tvName.text = it.name
-                var spannableStringBuilder = SpannableStringBuilder().apply {
-//                    append("Ngày đăng ${it.postDate}")
-//                    append(" - ")
+                tvPostDateAndViewCount.text = SpannableStringBuilder().apply {
+                    append("Ngày đăng ${DateUtil.convertMilliSecondToString(it.postDate.time)}")
+                    append(" - ")
                     append("Lượt xem: ${it.viewCount}", )
                 }
-
-                spannableStringBuilder.setSpan({
-
-                }, 0, spannableStringBuilder.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-
+                tvDescription.text = it.description
             }
         }
     }
