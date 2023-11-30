@@ -16,7 +16,6 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 class MainActivity : AppCompatActivity() {
-
     private lateinit var recyclerView: RecyclerView
     private lateinit var bookAdapter: BookAdapter
     private var listBook: MutableList<Book> = mutableListOf()
@@ -36,3 +35,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+// kato Update
