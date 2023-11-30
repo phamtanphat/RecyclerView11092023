@@ -25,6 +25,7 @@ class Book(
                 add(Book(R.drawable.image_review_sach_ba_nguoi_thay_vi_dai_book, "Review sách “Ba người thầy vĩ đại” của tác giả Robin Sharma", Date(1672678800000), 13268, "Cuốn sách “Ba người thầy vĩ đại” là một trong những cuốn sách đang để gối đầu giường, một tác phẩm xuất sắc về việc thay đổi bản thân để trở..."))
                 add(Book(R.drawable.image_review_sach_dung_co_lam_nguoi_tot_trong_mat_moi_nguoi_book, "Review sách Đừng cố làm người tốt trong mắt tất cả mọi người", Date(1672678800000), 10511, "Đừng cố làm người tốt trong mắt tất cả mọi người” điều này sẽ rất vô nghĩa. Thế giới có vô vàn kiểu người, có người tốt, người xấu và trong..."))
                 add(Book(R.drawable.image_nghe_thuat_tu_choi_book, "Nghệ thuật từ chối - Cách nói không mà vẫn có được đồng thuận", Date(1673370000000), 7925, "Nghệ thuật từ chối cuốn sách giúp bạn chinh phục kỹ năng giao tiếp, giúp bạn biết cách ứng xử sao cho phù hợp với tất cả các mối quan hệ xung quanh."))
+                add(Book(R.drawable.image_nghe_thuat_tu_choi_book, "Nghệ thuật từ chối - Cách nói không mà vẫn có được đồng thuận New", Date(1673370000000), 1000, "Nghệ thuật từ chối cuốn sách giúp bạn chinh phục kỹ năng giao tiếp, giúp bạn biết cách ứng xử sao cho phù hợp với tất cả các mối quan hệ xung quanh."))
             }
         }
     }
